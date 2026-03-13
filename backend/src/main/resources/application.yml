@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fidelix
+    username: fidelix
+    password: fidelix_pass
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+fidelix:
+  jwt:
+    secret: "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_32+_CHARS"
+    issuer: "fidelix"
+    expiryMinutes: 720

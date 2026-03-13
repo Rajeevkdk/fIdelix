@@ -1,0 +1,340 @@
+Initialized native services in: C:\Users\rajee\.gradle\native
+Initialized jansi services in: C:\Users\rajee\.gradle\native
+The client will now receive all logging from the daemon (pid: 30048). The daemon log file: C:\Users\rajee\.gradle\daemon\9.3.1\daemon-30048.out.log
+Starting 10th build in daemon [uptime: 38 mins 5.996 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 22% of 384 MiB]
+Using 16 worker leases.
+Operational build model parameters: {requiresToolingModels=false, parallelProjectExecution=false, configureOnDemand=false, configurationCache=false, configurationCacheParallelStore=false, configurationCacheParallelLoad=true, isolatedProjects=false, parallelProjectConfiguration=false, intermediateModelCache=false, parallelToolingApiActions=false, invalidateCoupledProjects=false, modelAsProjectDependency=false, resilientModelBuilding=false}
+Now considering [C:\Users\rajee\fidelix-suite\fidelix-suite\backend] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\rajee\fidelix-suite\fidelix-suite\backend\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\rajee\fidelix-suite\fidelix-suite\backend\build.gradle'.
+Included projects: [root project 'backend']
+
+> Configure project :
+Evaluating root project 'backend' using build file 'C:\Users\rajee\fidelix-suite\fidelix-suite\backend\build.gradle'.
+Resolved plugin [id: 'java']
+Resolved plugin [id: 'org.springframework.boot', version: '4.0.3']
+Resolved plugin [id: 'io.spring.dependency-management', version: '1.1.7']
+Applying dependency management to configuration 'annotationProcessor' in project 'backend'
+Applying dependency management to configuration 'apiElements' in project 'backend'
+Applying dependency management to configuration 'archives' in project 'backend'
+Applying dependency management to configuration 'bootArchives' in project 'backend'
+Applying dependency management to configuration 'compileClasspath' in project 'backend'
+Applying dependency management to configuration 'compileOnly' in project 'backend'
+Applying dependency management to configuration 'default' in project 'backend'
+Applying dependency management to configuration 'developmentOnly' in project 'backend'
+Applying dependency management to configuration 'implementation' in project 'backend'
+Applying dependency management to configuration 'mainSourceElements' in project 'backend'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'backend'
+Applying dependency management to configuration 'runtimeClasspath' in project 'backend'
+Applying dependency management to configuration 'runtimeElements' in project 'backend'
+Applying dependency management to configuration 'runtimeOnly' in project 'backend'
+Applying dependency management to configuration 'testAndDevelopmentOnly' in project 'backend'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'backend'
+Applying dependency management to configuration 'testCompileClasspath' in project 'backend'
+Applying dependency management to configuration 'testCompileOnly' in project 'backend'
+Applying dependency management to configuration 'testImplementation' in project 'backend'
+Applying dependency management to configuration 'testResultsElementsForTest' in project 'backend'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'backend'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'backend'
+All projects evaluated.
+Task name matched 'bootRun'
+Selected primary task 'bootRun' from project :
+Resolving global dependency management for project 'backend'
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':resolveMainClassName', task ':bootRun']
+Tasks that were excluded: []
+Resolve mutations for :compileJava (Thread[Execution worker,5,main]) started.
+:compileJava (Thread[Execution worker Thread 12,5,main]) started.
+
+> Task :compileJava UP-TO-DATE
+Custom actions are attached to task ':compileJava'.
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Skipping task ':compileJava' as it is up-to-date.
+Resolve mutations for :processResources (Thread[Execution worker Thread 12,5,main]) started.
+:processResources (Thread[Execution worker Thread 12,5,main]) started.
+
+> Task :processResources UP-TO-DATE
+Caching disabled for task ':processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':processResources' as it is up-to-date.
+Resolve mutations for :classes (Thread[Execution worker Thread 12,5,main]) started.
+:classes (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :resolveMainClassName (Thread[Execution worker Thread 11,5,main]) started.
+:resolveMainClassName (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :resolveMainClassName UP-TO-DATE
+Caching disabled for task ':resolveMainClassName' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':resolveMainClassName' as it is up-to-date.
+Resolve mutations for :bootRun (Thread[Execution worker Thread 11,5,main]) started.
+:bootRun (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :bootRun
+Caching disabled for task ':bootRun' because:
+  Build cache is disabled
+Task ':bootRun' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Starting process 'command 'C:\Program Files\Java\jdk-17\bin\java.exe''. Working directory: C:\Users\rajee\fidelix-suite\fidelix-suite\backend Command: C:\Program Files\Java\jdk-17\bin\java.exe -XX:TieredStopAtLevel=1 -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant -cp C:\Users\rajee\fidelix-suite\fidelix-suite\backend\build\classes\java\main;C:\Users\rajee\fidelix-suite\fidelix-suite\backend\build\resources\main;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.flywaydb\flyway-database-postgresql\11.14.1\9d4df925a247eb7dcac1e812dc9ab9e81f5ec393\flyway-database-postgresql-11.14.1.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.postgresql\postgresql\42.7.10\35100a3f0899551e27af8fed4a3414619a4663b3\postgresql-42.7.10.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-data-jpa\4.0.3\ed3bec355933bfb43f5c26e85999fb26714805b0\spring-boot-data-jpa-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-flyway\4.0.3\85d7a17d69398d1dc93e3687f6e9e526743ec8ca\spring-boot-flyway-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-hibernate\4.0.3\edd51fa97e27adfe033493dd367c34f853559221\spring-boot-hibernate-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-jpa\4.0.3\efae2341e25e140f4ccd2bf70337752193c10b8c\spring-boot-jpa-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-jdbc\4.0.3\a4868d5751c42cc1da95ee6c60a9e3046131741d\spring-boot-jdbc-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-validation\4.0.3\9e62d4105ac151c893fdb9c81863eb4ad570070d\spring-boot-validation-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-webmvc\4.0.3\8100d8a8c357271d8d78ecdee0d8441b00243786\spring-boot-webmvc-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-http-converter\4.0.3\72a29a59c5b1b55a151e851c3c823f01bfca106\spring-boot-http-converter-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.flywaydb\flyway-core\11.14.1\869ad74f22948c22904fd99cb78b9d5b8b8e18b4\flyway-core-11.14.1.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.52.0\9c17f496846ab1fca8975c6a50ceac0b3bbe63f0\checker-qual-3.52.0.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\4.0.3\22e2d188c24d65ed1ffe97363c61e8246d2ed430\spring-boot-autoconfigure-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-jpa\4.0.3\1e2f573cfeef6894fa077c7de0f7ee7502556ee3\spring-data-jpa-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-tomcat\4.0.3\28975c97048bac17c944b7b402715428dddf9c65\spring-boot-tomcat-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\jakarta.annotation\jakarta.annotation-api\3.0.0\54f928fadec906a99d558536756d171917b9d936\jakarta.annotation-api-3.0.0.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\2.5\2d53ddec134280cb384c1e35d094e5f71c1f2316\snakeyaml-2.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\com.zaxxer\HikariCP\7.0.2\c2b43c946b86a14a96342379e22b004c56c6166d\HikariCP-7.0.2.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-data-commons\4.0.3\f8aae3b50818226648f19b1040cb720ee422c16\spring-boot-data-commons-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aspects\7.0.5\69189ba1f8996e79ae0317d45c6b969893b93e7a\spring-aspects-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-sql\4.0.3\afe39a694d946d9fc185922fd755e7d3fe197571\spring-boot-sql-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-transaction\4.0.3\e62e8857548d32ffc5666f0b947073930b12fe8b\spring-boot-transaction-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-jackson\4.0.3\ad6f3dff63a566bc57e100335dc5646b5b62f592\spring-boot-jackson-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-servlet\4.0.3\7d435c96323d8fa917be8d70b2c2a001a8794ff4\spring-boot-servlet-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-persistence\4.0.3\58ed08c6834a22536086d650a34a733baf37313d\spring-boot-persistence-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-web-server\4.0.3\ed321647244629861a510d7df598d28689b2aa36\spring-boot-web-server-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\4.0.3\3cdf46caf2392aa752dfb956ee010b1d70fb9acd\spring-boot-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-orm\7.0.5\bd9d32356ea016214154fe86cc49ec8d8eed854\spring-orm-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\7.0.5\10cc68ecb63975683ceb923c2d07f09565ba5e82\spring-jdbc-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-el\11.0.18\44a04ab91a1e046f436c1746d5a93d1fff57982f\tomcat-embed-el-11.0.18.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.hibernate.validator\hibernate-validator\9.0.1.Final\28c0e41ecc84d1f0b8b6d81d16e0784e63364e68\hibernate-validator-9.0.1.Final.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\7.0.5\77b2de8c45182565be884a7158845cb3d6f23788\spring-webmvc-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\7.0.5\b2edb5890bb10edcf1ac539b0a4ef1c105fe8db3\spring-web-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.20.2\615d3bd6d47b569e93d2ad45423f93ca9b002d73\jackson-core-2.20.2.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.20.2\257229ed4142d1b01a46b71105fd016e9cf7063e\jackson-databind-2.20.2.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.5.32\2b1042c50f508f2eb402bd4d22ccbdf94cc37d2e\logback-classic-1.5.32.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-to-slf4j\2.25.3\30adfb40cca243ec88cf7ec1fddb411ab55faa4f\log4j-to-slf4j-2.25.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\2.0.17\524cb6ccc2b68a57604750e1ab8b13b5a786a6aa\jul-to-slf4j-2.0.17.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-commons\4.0.3\da67d50cde92cade5e3e184266bc70a99cbf20af\spring-data-commons-4.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.17\d9e58ac9c7779ba3bf8142aff6c830617a7fe60f\slf4j-api-2.0.17.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.hibernate.orm\hibernate-core\7.2.4.Final\b23aac4c9681a7f6a539e94fd18a985e517c7dcb\hibernate-core-7.2.4.Final.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\7.0.5\f0bed37a25f4880f3e93a9556425394087bdc1e9\spring-context-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\7.0.5\647607a091a862fdf1562764a8f41ef962b6c3cc\spring-aop-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\7.0.5\d305e839f8d6a11ba4e12f3abbfda23e8ff7f946\spring-tx-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\7.0.5\e20d1006aca78c2c58f5eb85d58bc60672a3527c\spring-beans-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\7.0.5\601ded105fb8580fe6c26cb87b1b005033c66350\spring-expression-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\7.0.5\186a59c9647b6a87e9c5ca8a862b8ac478e9ea14\spring-core-7.0.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4-runtime\4.13.2\fc3db6d844df652a3d5db31c87fa12757f13691d\antlr4-runtime-4.13.2.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.9.25.1\a713c790da4d794c7dfb542b550d4e44898d5e23\aspectjweaver-1.9.25.1.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\jakarta.validation\jakarta.validation-api\3.1.1\ec8622148afc5564235d17af80ea80288d0e7f92\jakarta.validation-api-3.1.1.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.hibernate.models\hibernate-models\1.0.1\3158c5f9309494b905de62c72f6f02d108aea651\hibernate-models-1.0.1.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.6.2.Final\3e0a139d7a74cc13b5e01daa8aaa7f71dccd577e\jboss-logging-3.6.2.Final.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.7.3\f61c7e7b81e9249b0f6a05914eff9d54fb09f4a0\classmate-1.7.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\tools.jackson.core\jackson-core\3.0.4\c5be0f5814e161030c29fc48b92c27331729ab7f\jackson-core-3.0.4.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\tools.jackson.core\jackson-databind\3.0.4\b5f818b0b9c79d344aede4b87064cc0e323f9ef2\jackson-databind-3.0.4.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-websocket\11.0.18\7b0009018394a033e922e8e956d4947dce1ffd07\tomcat-embed-websocket-11.0.18.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\11.0.18\a96bb1b8a21ee7e93ce01cce7fd63f8e7561ec92\tomcat-embed-core-11.0.18.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-observation\1.16.3\2846fee03dd959802e7cebf0f26c9ae2a59176a4\micrometer-observation-1.16.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.20\6a5e7291ea3f2b590a7ce400adb7b3aea4d7e12c\jackson-annotations-2.20.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.5.32\fdfb3ff9a842303d4a95207294a6c6bc64e2605d\logback-core-1.5.32.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.25.3\fb385330d89c2d61058ef649403f214633569205\log4j-api-2.25.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\jakarta.persistence\jakarta.persistence-api\3.2.0\bb75a113f3fa191c2c7ee7b206d8e674251b3129\jakarta.persistence-api-3.2.0.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\jakarta.transaction\jakarta.transaction-api\2.0.1\51a520e3fae406abb84e2e1148e6746ce3f80a1a\jakarta.transaction-api-2.0.1.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy\1.17.8\af5735f63d00ca47a9375fae5c7471a36331c6ed\byte-buddy-1.17.8.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\4.0.6\fb95ebb62564657b2fedfe165b859789ef3a8711\jaxb-runtime-4.0.6.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-core\4.0.6\8e61282303777fc98a00cc3affd0560d68748a75\jaxb-core-4.0.6.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\jakarta.xml.bind\jakarta.xml.bind-api\4.0.4\d6d2327f3817d9a33a3b6b8f2e15a96bc2e7afdc\jakarta.xml.bind-api-4.0.4.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\jakarta.inject\jakarta.inject-api\2.0.1\4c28afe1991a941d7702fe1362c365f0a8641d1e\jakarta.inject-api-2.0.1.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.3.5\a3fcc5d3c29b2b03433aa2d2f2d2c1b1638924a1\commons-logging-1.3.5.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-commons\1.16.3\2ee3cbdd1c32d8cc6defd6ed8b21695dfcb1e763\micrometer-commons-1.16.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.jspecify\jspecify\1.0.0\7425a601c1c7ec76645a78d22b8c6a627edee507\jspecify-1.0.0.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.eclipse.angus\angus-activation\2.0.3\7f80607ea5014fef0b1779e6c33d63a88a45a563\angus-activation-2.0.3.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\jakarta.activation\jakarta.activation-api\2.1.4\9e5c2a0d75dde71a0bedc4dbdbe47b78a5dc50f8\jakarta.activation-api-2.1.4.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\txw2\4.0.6\4f4cd53b5ff9a2c5aa1211f15ed2569c57dfb044\txw2-4.0.6.jar;C:\Users\rajee\.gradle\caches\modules-2\files-2.1\com.sun.istack\istack-commons-runtime\4.1.2\18ec117c85f3ba0ac65409136afa8e42bc74e739\istack-commons-runtime-4.1.2.jar com.fidelix.backend.BackendApplication
+Successfully started process 'command 'C:\Program Files\Java\jdk-17\bin\java.exe''
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-02-22T00:44:40.756+05:45  INFO 30024 --- [backend] [           main] com.fidelix.backend.BackendApplication   : Starting BackendApplication using Java 17.0.12 with PID 30024 (C:\Users\rajee\fidelix-suite\fidelix-suite\backend\build\classes\java\main started by rajee in C:\Users\rajee\fidelix-suite\fidelix-suite\backend)
+2026-02-22T00:44:40.763+05:45  INFO 30024 --- [backend] [           main] com.fidelix.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-22T00:44:41.739+05:45  INFO 30024 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-22T00:44:41.769+05:45  INFO 30024 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2026-02-22T00:44:42.508+05:45  INFO 30024 --- [backend] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-22T00:44:42.525+05:45  INFO 30024 --- [backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-22T00:44:42.525+05:45  INFO 30024 --- [backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-02-22T00:44:42.617+05:45  INFO 30024 --- [backend] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1770 ms
+2026-02-22T00:44:43.254+05:45  INFO 30024 --- [backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-22T00:44:44.466+05:45  WARN 30024 --- [backend] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+---------------------------------------------------------------------------------------------------------
+SQL State  : 22023
+Error Code : 0
+Message    : FATAL: invalid value for parameter "TimeZone": "Asia/Kathmandu"
+
+2026-02-22T00:44:44.471+05:45  INFO 30024 --- [backend] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-22T00:44:44.482+05:45  INFO 30024 --- [backend] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-22T00:44:44.506+05:45 ERROR 30024 --- [backend] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+---------------------------------------------------------------------------------------------------------
+SQL State  : 22023
+Error Code : 0
+Message    : FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.3.jar:4.0.3]
+	at com.fidelix.backend.BackendApplication.main(BackendApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+---------------------------------------------------------------------------------------------------------
+SQL State  : 22023
+Error Code : 0
+Message    : FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.5.jar:7.0.5]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+---------------------------------------------------------------------------------------------------------
+SQL State  : 22023
+Error Code : 0
+Message    : FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:70) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.3.jar:4.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.5.jar:7.0.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.5.jar:7.0.5]
+	... 17 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: invalid value for parameter "TimeZone": "Asia/Katmandu"
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2875) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:3000) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:235) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:344) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:290) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.10.jar:42.7.10]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:65) ~[flyway-core-11.14.1.jar:na]
+	... 23 common frames omitted
+
+
+> Task :bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':bootRun'.
+> Process 'command 'C:\Program Files\Java\jdk-17\bin\java.exe'' finished with non-zero exit value 1
+
+* Try:
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':bootRun'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:135)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:288)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:133)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:121)
+	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:41)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.DefaultNodeExecutor.executeLocalTaskNode(DefaultNodeExecutor.java:55)
+	at org.gradle.execution.plan.DefaultNodeExecutor.execute(DefaultNodeExecutor.java:34)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:355)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:343)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:339)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:84)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:339)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:328)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+Caused by: org.gradle.process.ProcessExecutionException: Process 'command 'C:\Program Files\Java\jdk-17\bin\java.exe'' finished with non-zero exit value 1
+	at org.gradle.process.internal.DefaultExecHandle$ExecResultImpl.assertNormalExitValue(DefaultExecHandle.java:454)
+	at org.gradle.process.internal.DefaultJavaExecAction.execute(DefaultJavaExecAction.java:58)
+	at org.gradle.api.tasks.JavaExec.exec(JavaExec.java:166)
+	at org.springframework.boot.gradle.tasks.run.BootRun.exec(BootRun.java:75)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:259)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:244)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:227)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:210)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:176)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:110)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:47)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:64)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:61)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:61)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:47)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:51)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:29)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.executeMutable(RemovePreviousOutputsStep.java:70)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.executeMutable(RemovePreviousOutputsStep.java:40)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:62)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:27)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.executeMutable(ResolveInputChangesStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.executeMutable(ResolveInputChangesStep.java:28)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:192)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:76)
+	at org.gradle.internal.Either$Right.fold(Either.java:176)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:74)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:49)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.executeMutable(ResolveChangesStep.java:63)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.executeMutable(ResolveChangesStep.java:34)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:64)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:42)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:77)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:46)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:133)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:59)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.executeMutable(HandleStaleOutputsStep.java:77)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.executeMutable(HandleStaleOutputsStep.java:43)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:305)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:44)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:31)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:68)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:132)
+	... 30 more
+
+
+BUILD FAILED in 8s
+4 actionable tasks: 1 executed, 3 up-to-date
+Watched directory hierarchies: [C:\Users\rajee\fidelix-suite\fidelix-suite\backend]
