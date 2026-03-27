@@ -13,17 +13,24 @@ services:
     volumes:
       - fidelix_pgdata:/var/lib/postgresql/data
 
-  pgadmin:
-    image: dpage/pgadmin4:8
-    container_name: fidelix-pgadmin
-    restart: unless-stopped
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@fidelixglobal.com
-      PGADMIN_DEFAULT_PASSWORD: admin_pass
-    ports:
-      - "5050:80"
+    backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      container_name: fidelix-backend
+      restart: unless-stopped
     depends_on:
+      - db
+  environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/fidelix
+      SPRING_DATASOURCE_USERNAME: fidelix
+      SPRING_DATASOURCE_PASSWORD: fidelix_pass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      SERVER_PORT: 8080
+  ports:
+      - "8080:8080"
+  depends_on:
       - db
 
 volumes:
-  fidelix_pgdata:
+fidelix_pgdata:
