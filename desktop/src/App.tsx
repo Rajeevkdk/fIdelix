@@ -104,7 +104,7 @@ function addDays(dateStr: string, days: number) {
 }
 
 export default function App() {
-  const API = "http://localhost:8080";
+  const API = "https://api.fidelixglobal.com";
 
   // ===== API helper (always sends JWT) =====
   async function api(path: string, init: RequestInit = {}) {
