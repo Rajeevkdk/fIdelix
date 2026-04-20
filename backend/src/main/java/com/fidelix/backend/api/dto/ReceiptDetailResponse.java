@@ -41,6 +41,9 @@ public class ReceiptDetailResponse {
     public String receiverCityCountry;
     public String receiverPostalCode;
     public String receiverEmail;
+
+    public String forwardingTrackingNo;
+    public String forwardingTrackingUrl;
   }
 
   public static class Item {

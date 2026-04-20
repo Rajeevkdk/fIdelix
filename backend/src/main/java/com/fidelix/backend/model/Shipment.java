@@ -27,10 +27,10 @@ public class Shipment {
   private Receipt receipt;
 
   @Column(name="shipment_type", nullable=false)
-  private String shipmentType; // DOCUMENT/PARCEL/CARGO
+  private String shipmentType;
 
   @Column(name="service_type")
-  private String serviceType;  // AIR/SURFACE/EXPRESS/ECONOMY
+  private String serviceType;
 
   @Column(name="weight_kg", precision=12, scale=3)
   private BigDecimal weightKg;
@@ -57,6 +57,12 @@ public class Shipment {
 
   @Column(name="receiver_email")
   private String receiverEmail;
+
+  @Column(name="forwarding_tracking_no")
+  private String forwardingTrackingNo;
+
+  @Column(name="forwarding_tracking_url")
+  private String forwardingTrackingUrl;
 
   public Long getId() { return id; }
   public String getTrackingNo() { return trackingNo; }
@@ -91,4 +97,8 @@ public class Shipment {
   public void setReceiverPostalCode(String receiverPostalCode) { this.receiverPostalCode = receiverPostalCode; }
   public String getReceiverEmail() { return receiverEmail; }
   public void setReceiverEmail(String receiverEmail) { this.receiverEmail = receiverEmail; }
+  public String getForwardingTrackingNo() { return forwardingTrackingNo; }
+  public void setForwardingTrackingNo(String forwardingTrackingNo) { this.forwardingTrackingNo = forwardingTrackingNo; }
+  public String getForwardingTrackingUrl() { return forwardingTrackingUrl; }
+  public void setForwardingTrackingUrl(String forwardingTrackingUrl) { this.forwardingTrackingUrl = forwardingTrackingUrl; }
 }

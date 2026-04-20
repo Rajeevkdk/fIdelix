@@ -148,6 +148,8 @@ public class ReceiptQueryService {
     resp.shipment.receiverCityCountry = shipment.getReceiverCityCountry();
     resp.shipment.receiverPostalCode = shipment.getReceiverPostalCode();
     resp.shipment.receiverEmail = shipment.getReceiverEmail();
+    resp.shipment.forwardingTrackingNo = shipment.getForwardingTrackingNo();
+    resp.shipment.forwardingTrackingUrl = shipment.getForwardingTrackingUrl();
 
     resp.items = new ArrayList<>();
     for (ReceiptItem it : items) {
