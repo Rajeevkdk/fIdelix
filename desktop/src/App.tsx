@@ -270,7 +270,7 @@ setForwardingTrackingUrl("");
         receiverPostalCode,
         receiverEmail,
         forwardingTrackingNo,
-forwardingTrackingUrl,
+        forwardingTrackingUrl,
         shipmentType,
         serviceType,
         weightKg: Number(weightKg) || 0,

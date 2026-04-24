@@ -28,24 +28,23 @@ public class PublicTrackingService {
 
     PublicTrackingResponse resp = new PublicTrackingResponse();
     resp.trackingNo = shipment.getTrackingNo();
-resp.shipmentType = shipment.getShipmentType();
-resp.serviceType = shipment.getServiceType();
-resp.receiverName = shipment.getReceiverName();
-resp.receiverCityCountry = shipment.getReceiverCityCountry();
-resp.status = events.isEmpty() ? "Shipment Created" : events.get(0).getStatus();
+    resp.shipmentType = shipment.getShipmentType();
+    resp.serviceType = shipment.getServiceType();
+    resp.receiverName = shipment.getReceiverName();
+    resp.receiverCityCountry = shipment.getReceiverCityCountry();
+    resp.status = events.isEmpty() ? "Shipment Created" : events.get(0).getStatus();
 
-// placeholder for now
-resp.forwardingTrackingNo = null;
-resp.forwardingTrackingUrl = null;
+    resp.forwardingTrackingNo = shipment.getForwardingTrackingNo();
+    resp.forwardingTrackingUrl = shipment.getForwardingTrackingUrl();
 
     resp.events = events.stream()
-    .map(e -> new PublicTrackingResponse.Event(
-        e.getStatus(),
-        e.getLocation(),
-        null,
-        e.getEventTime()
-    ))
-    .toList();
+        .map(e -> new PublicTrackingResponse.Event(
+            e.getStatus(),
+            e.getLocation(),
+            null,
+            e.getEventTime()
+        ))
+        .toList();
 
     return resp;
   }
