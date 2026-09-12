@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="hero premium-hero">
       <div className="container hero-grid">
-        <div className="hero-left">
+        <div className="hero-left reveal reveal-first">
           <p className="eyebrow">Premium Logistics Services</p>
           <h1>
             Delivering trust
@@ -27,40 +27,45 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="hero-badges">
-            <span>Document Delivery</span>
-            <span>Parcel Shipping</span>
-            <span>Cargo Service</span>
+          <div className="hero-badges hero-proof-points">
+            <span>Documents</span>
+            <span>Parcels</span>
+            <span>Cargo</span>
             <span>Global Reach</span>
           </div>
         </div>
 
-        <div className="hero-right">
-          <div className="hero-feature-card">
-            <img src={logo} alt="Fidelix" className="hero-logo" />
-            <p className="mini-label">Trusted logistics partner</p>
-            <h3>Built for customers who want speed, clarity, and confidence.</h3>
-            <p>
-              From local support in Kathmandu to international delivery flow,
-              Fidelix is built to help customers ship with confidence.
-            </p>
+        <div className="hero-right reveal reveal-second">
+          <div className="route-visual" aria-label="Shipment journey from Kathmandu to worldwide destinations">
+            <div className="route-grid" />
+            <div className="route-glow route-glow-one" />
+            <div className="route-glow route-glow-two" />
+            <div className="route-line">
+              <span className="route-line-progress" />
+            </div>
+            <div className="route-node route-origin">
+              <span className="route-pin">KTM</span>
+              <strong>Kathmandu</strong>
+              <small>Fidelix hub</small>
+            </div>
+            <div className="route-node route-destination">
+              <span className="route-pin">GLB</span>
+              <strong>Worldwide</strong>
+              <small>Connected routes</small>
+            </div>
+            <div className="parcel-marker" aria-hidden="true" />
 
-            <div className="hero-card-grid">
-              <div>
-                <strong>Fast</strong>
-                <span>Responsive support</span>
+            <div className="hero-feature-card route-status-card">
+              <div className="route-status-topline">
+                <img src={logo} alt="Fidelix" className="hero-logo" />
+                <div>
+                  <p className="mini-label">In motion</p>
+                  <strong>Every shipment deserves a clear story.</strong>
+                </div>
               </div>
-              <div>
-                <strong>Secure</strong>
-                <span>Handled with care</span>
-              </div>
-              <div>
-                <strong>Trackable</strong>
-                <span>Status visibility</span>
-              </div>
-              <div>
-                <strong>Global</strong>
-                <span>Worldwide coverage</span>
+              <div className="route-status-copy">
+                <span className="status-pulse" />
+                <p>From a Kathmandu pickup to a global delivery, stay close to every update.</p>
               </div>
             </div>
           </div>

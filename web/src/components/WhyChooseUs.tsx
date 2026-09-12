@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
   return (
     <section id="why-us" className="section soft-section">
       <div className="container why-grid">
-        <div>
+        <div className="reveal reveal-first">
           <p className="eyebrow">Why Choose Fidelix</p>
           <h2>A modern logistics brand built on reliability</h2>
           <p className="section-copy">
@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        <div className="premium-card why-card">
+        <div className="premium-card why-card reveal reveal-second">
           <p className="mini-label">Our promise</p>
           <h3>Simple shipping process. Strong customer confidence.</h3>
           <p>

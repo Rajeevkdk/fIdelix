@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import Services from "../components/Services";
 import WhyChooseUs from "../components/WhyChooseUs";
 import TrackingCard from "../components/TrackingCard";
+import CompanyStory from "../components/CompanyStory";
 
 function HomeLocation() {
   return (
@@ -77,6 +78,7 @@ export default function HomePage() {
       <Hero />
       <Services />
       <WhyChooseUs />
+      <CompanyStory />
       <TrackingCard />
       <HomeLocation />
     </>

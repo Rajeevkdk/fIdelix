@@ -1,13 +1,16 @@
 const services = [
   {
+    number: "01",
     title: "Document Delivery",
     text: "Secure and time-sensitive shipment support for important documents.",
   },
   {
+    number: "02",
     title: "Parcel Shipping",
     text: "Reliable parcel forwarding with careful handling and shipment visibility.",
   },
   {
+    number: "03",
     title: "Cargo Service",
     text: "Flexible cargo solutions for larger and business-oriented shipments.",
   },
@@ -26,13 +29,15 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="cards three-col">
-          {services.map((item) => (
-            <div className="card premium-card" key={item.title}>
+        <div className="cards three-col service-cards">
+          {services.map((item, index) => (
+            <article className={`card premium-card service-card reveal reveal-${index + 1}`} key={item.title}>
+              <span className="service-number">{item.number}</span>
               <div className="service-icon">{item.title.charAt(0)}</div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-            </div>
+              <span className="service-arrow" aria-hidden="true">Explore</span>
+            </article>
           ))}
         </div>
       </div>

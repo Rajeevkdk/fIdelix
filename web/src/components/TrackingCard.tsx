@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 
 type TrackingEvent = {
   status: string;
@@ -20,6 +20,26 @@ type TrackingResponse = {
 };
 
 const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8080";
+const journeySteps = ["Booking created", "With Fidelix", "In transit", "Delivered"];
+
+function getJourneyProgress(data: TrackingResponse) {
+  const status = `${data.status} ${data.events.map((event) => event.status).join(" ")}`.toLowerCase();
+
+  if (/(delivered|complete)/.test(status)) return 3;
+  if (/(out for delivery|arrived|transit|forwarded|departed)/.test(status)) return 2;
+  if (/(picked|received|processing|collected)/.test(status) || data.events.length > 0) return 1;
+  return 0;
+}
+
+function formatEventTime(eventTime: string) {
+  const date = new Date(eventTime);
+  if (Number.isNaN(date.getTime())) return "Time pending";
+
+  return new Intl.DateTimeFormat(undefined, {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(date);
+}
 
 export default function TrackingCard() {
   const [trackingNo, setTrackingNo] = useState("");
@@ -27,8 +47,8 @@ export default function TrackingCard() {
   const [error, setError] = useState("");
   const [data, setData] = useState<TrackingResponse | null>(null);
 
-  async function handleTrack(e: React.FormEvent) {
-    e.preventDefault();
+  async function handleTrack(event: React.FormEvent) {
+    event.preventDefault();
     setError("");
     setData(null);
 
@@ -39,20 +59,31 @@ export default function TrackingCard() {
 
     try {
       setLoading(true);
-      const res = await fetch(
+      const response = await fetch(
         `${API_BASE}/api/public/track/${encodeURIComponent(trackingNo.trim())}`
       );
-      if (!res.ok) {
+      if (!response.ok) {
         throw new Error("Tracking number not found.");
       }
-      const json = (await res.json()) as TrackingResponse;
-      setData(json);
-    } catch (err: any) {
-      setError(err?.message ?? "Unable to fetch tracking details.");
+      setData((await response.json()) as TrackingResponse);
+    } catch (requestError) {
+      setError(
+        requestError instanceof Error
+          ? requestError.message
+          : "Unable to fetch tracking details."
+      );
     } finally {
       setLoading(false);
     }
   }
+
+  const progressIndex = data ? getJourneyProgress(data) : 0;
+  const progressPercent = (progressIndex / (journeySteps.length - 1)) * 100;
+  const sortedEvents = data
+    ? [...data.events].sort(
+        (first, second) => new Date(second.eventTime).getTime() - new Date(first.eventTime).getTime()
+      )
+    : [];
 
   return (
     <section className="section tracking-wrap">
@@ -66,91 +97,129 @@ export default function TrackingCard() {
             </p>
           </div>
 
-          <div className="tracking-box premium-card">
+          <div className="tracking-box premium-card tracking-search-card">
             <form className="tracking-form" onSubmit={handleTrack}>
-              <input
-                type="text"
-                placeholder="Enter Fidelix tracking number"
-                value={trackingNo}
-                onChange={(e) => setTrackingNo(e.target.value)}
-              />
+              <label className="tracking-input-wrap">
+                <span className="tracking-input-label">Fidelix tracking number</span>
+                <input
+                  type="text"
+                  placeholder="Enter tracking number"
+                  value={trackingNo}
+                  onChange={(inputEvent) => setTrackingNo(inputEvent.target.value)}
+                />
+              </label>
               <button type="submit" disabled={loading}>
-                {loading ? "Tracking..." : "Track Now"}
+                {loading ? <><span className="button-spinner" /> Finding shipment</> : "Track shipment"}
               </button>
             </form>
 
             {error && <p className="tracking-message error">{error}</p>}
 
             {data && (
-              <div className="tracking-result">
-                <div className="tracking-summary premium-card">
-                  <div className="summary-row">
-                    <span>Fidelix Tracking No</span>
-                    <strong>{data.trackingNo}</strong>
+              <div className="tracking-result" aria-live="polite">
+                <div className="tracking-status-header">
+                  <div>
+                    <p className="mini-label">Shipment {data.trackingNo}</p>
+                    <h3>{data.status}</h3>
+                    <p>Latest movement and delivery progress in one view.</p>
                   </div>
-                  <div className="summary-row">
-                    <span>Current Status</span>
-                    <strong className="status-badge">{data.status}</strong>
+                  <div className="delivery-crest" aria-hidden="true">
+                    <span>{data.receiverCityCountry.slice(0, 2).toUpperCase()}</span>
+                    <small>Destination</small>
                   </div>
-                  <div className="summary-row">
-                    <span>Shipment Type</span>
-                    <strong>{data.shipmentType}</strong>
-                  </div>
-                  <div className="summary-row">
-                    <span>Service</span>
-                    <strong>{data.serviceType || "—"}</strong>
-                  </div>
-                  <div className="summary-row">
-                    <span>Receiver</span>
-                    <strong>{data.receiverName}</strong>
-                  </div>
-                  <div className="summary-row">
-                    <span>Destination</span>
-                    <strong>{data.receiverCityCountry}</strong>
-                  </div>
-                  <div className="summary-row">
-                    <span>Forwarding Number</span>
-                    <strong>{data.forwardingTrackingNo || "Will be updated once assigned by partner carrier"}</strong>
-                  </div>
-                  <div className="summary-row">
-                    <span>Official Carrier Tracking</span>
-                    {data.forwardingTrackingUrl ? (
+                </div>
+
+                <div
+                  className="journey-progress"
+                  style={{ "--journey-progress": `${progressPercent}%` } as CSSProperties}
+                  aria-label={`Shipment progress: ${journeySteps[progressIndex]}`}
+                >
+                  <div className="journey-track"><span /></div>
+                  {journeySteps.map((step, index) => (
+                    <div
+                      className={`journey-step ${index <= progressIndex ? "is-complete" : ""} ${index === progressIndex ? "is-current" : ""}`}
+                      key={step}
+                    >
+                      <span className="journey-dot">{index + 1}</span>
+                      <strong>{step}</strong>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="tracking-detail-grid">
+                  <div className="tracking-summary premium-card">
+                    <div className="summary-header">
+                      <h3>Shipment details</h3>
+                      <strong className="status-badge"><span className="status-pulse" />{data.status}</strong>
+                    </div>
+                    <div className="summary-row">
+                      <span>Shipment type</span>
+                      <strong>{data.shipmentType}</strong>
+                    </div>
+                    <div className="summary-row">
+                      <span>Service</span>
+                      <strong>{data.serviceType || "Not assigned"}</strong>
+                    </div>
+                    <div className="summary-row">
+                      <span>Receiver</span>
+                      <strong>{data.receiverName}</strong>
+                    </div>
+                    <div className="summary-row">
+                      <span>Destination</span>
+                      <strong>{data.receiverCityCountry}</strong>
+                    </div>
+                    <div className="summary-row summary-row-partner">
+                      <span>Partner carrier</span>
+                      <strong>{data.forwardingTrackingNo || "Assignment pending"}</strong>
+                    </div>
+                    {data.forwardingTrackingUrl && (
                       <a
                         href={data.forwardingTrackingUrl}
                         target="_blank"
                         rel="noreferrer"
                         className="track-link-btn"
                       >
-                        Open Carrier Tracking
+                        Open official carrier tracking <span aria-hidden="true">-&gt;</span>
                       </a>
-                    ) : (
-                      <span className="pending-text">Official carrier tracking link will be added once assigned.</span>
                     )}
                   </div>
-                </div>
 
-                <div className="timeline-wrap">
-                  <h3>Shipment Timeline</h3>
+                  <div className="timeline-wrap">
+                    <div className="timeline-heading">
+                      <div>
+                        <p className="mini-label">Movement history</p>
+                        <h3>Shipment timeline</h3>
+                      </div>
+                      <span>{sortedEvents.length} update{sortedEvents.length === 1 ? "" : "s"}</span>
+                    </div>
 
-                  {data.events.length === 0 ? (
-                    <div className="card premium-card">
-                      <p>No tracking events yet. Shipment has been created.</p>
-                    </div>
-                  ) : (
-                    <div className="timeline">
-                      {data.events.map((ev, idx) => (
-                        <div className="timeline-item" key={idx}>
-                          <div className="timeline-dot" />
-                          <div className="timeline-card">
-                            <h4>{ev.status}</h4>
-                            <p><b>Location:</b> {ev.location || "—"}</p>
-                            <p><b>Remarks:</b> {ev.remarks || "—"}</p>
-                            <p><b>Time:</b> {new Date(ev.eventTime).toLocaleString()}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                    {sortedEvents.length === 0 ? (
+                      <div className="empty-timeline">
+                        <span className="empty-timeline-orbit" aria-hidden="true" />
+                        <h4>Your shipment is being prepared.</h4>
+                        <p>The first scan will appear here as soon as it is received.</p>
+                      </div>
+                    ) : (
+                      <div className="timeline">
+                        {sortedEvents.map((shipmentEvent, index) => (
+                          <article className="timeline-item" key={`${shipmentEvent.eventTime}-${index}`}>
+                            <div className="timeline-marker">
+                              <div className="timeline-dot" />
+                              {index < sortedEvents.length - 1 && <div className="timeline-stem" />}
+                            </div>
+                            <div className="timeline-card">
+                              <div className="timeline-card-topline">
+                                <h4>{shipmentEvent.status}</h4>
+                                <time dateTime={shipmentEvent.eventTime}>{formatEventTime(shipmentEvent.eventTime)}</time>
+                              </div>
+                              <p className="event-location">{shipmentEvent.location || "Location update pending"}</p>
+                              {shipmentEvent.remarks && <p className="event-remarks">{shipmentEvent.remarks}</p>}
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             )}
