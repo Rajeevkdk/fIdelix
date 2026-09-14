@@ -3,6 +3,7 @@ import Services from "../components/Services";
 import WhyChooseUs from "../components/WhyChooseUs";
 import TrackingCard from "../components/TrackingCard";
 import CompanyStory from "../components/CompanyStory";
+import Ownership from "../components/Ownership";
 
 function HomeLocation() {
   return (
@@ -79,6 +80,7 @@ export default function HomePage() {
       <Services />
       <WhyChooseUs />
       <CompanyStory />
+      <Ownership />
       <TrackingCard />
       <HomeLocation />
     </>
